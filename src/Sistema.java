@@ -18,6 +18,7 @@ public class Sistema {
         int defesa;
         int poderMagia;
         int poderAtilharia;
+        int poderCura;
 
         switch (op) {
             case 1:
@@ -68,7 +69,24 @@ public class Sistema {
 
 
             case 3:
-            
+                System.out.println("\nNovo Curador:");
+                System.out.print("Nome: ");
+                nome = Console.lerString();
+
+                System.out.print("\nAtaque: ");
+                ataque = Console.lerInt();
+
+                System.out.print("Defesa:");
+                defesa = Console.lerInt();
+
+                System.out.print("\nPoder de Cura: ");
+                poderCura= Console.lerInt();
+
+                Curador c = new Curador(nome, ataque, defesa, poderCura);
+
+                Cadastro.cadastrar(c);
+
+                System.out.println("\nCurador cadastrado com sucesso!");
             
                 break;
 
